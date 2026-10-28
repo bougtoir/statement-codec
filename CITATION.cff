@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "Statement Codec: reference implementation for verifiable attributed quotations"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: Onishi
+    given-names: Tatsuki
+version: "0.4"
+date-released: "2026-10-28"
+license: MIT
+repository-code: "https://github.com/bougtoir/statement-codec"
+abstract: >-
+  Reference implementation of a verification contract for attributed
+  statements: signed statements, signed span quotations with positional
+  context constraints, bitemporal validity/commitment semantics, consent
+  manifests, and a hash-chained audit log. All benchmark data are synthetic.
+keywords:
+  - provenance
+  - quotation integrity
+  - bitemporal data
+  - audit logs
+  - verifiable credentials

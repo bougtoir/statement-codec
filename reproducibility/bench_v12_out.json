@@ -1,0 +1,202 @@
+{
+  "_label": "SYNTHETIC benchmark v12 — NOT real-world performance",
+  "seed": 20261010,
+  "corpus": {
+    "t1": 18,
+    "t2": 9,
+    "t3": 1,
+    "policy": 2
+  },
+  "T1": {
+    "codec": {
+      "accuracy": 1.0,
+      "ctx": {
+        "p": 1.0,
+        "r": 1.0,
+        "f1": 1.0
+      },
+      "overwarn": 0
+    },
+    "comp_baseline": {
+      "accuracy": 0.833,
+      "ctx": {
+        "p": 1.0,
+        "r": 0.833,
+        "f1": 0.909
+      }
+    },
+    "ablation_no_context": {
+      "accuracy": 0.667,
+      "ctx_recall": 0.0
+    },
+    "confusion": {
+      "EXACT": {
+        "EXACT": 6,
+        "TRANSFORMED": 0,
+        "CONTEXT_FLAG": 0,
+        "DISPUTED": 0,
+        "UNVERIFIABLE": 0
+      },
+      "TRANSFORMED": {
+        "EXACT": 0,
+        "TRANSFORMED": 2,
+        "CONTEXT_FLAG": 0,
+        "DISPUTED": 0,
+        "UNVERIFIABLE": 0
+      },
+      "CONTEXT_FLAG": {
+        "EXACT": 0,
+        "TRANSFORMED": 0,
+        "CONTEXT_FLAG": 6,
+        "DISPUTED": 0,
+        "UNVERIFIABLE": 0
+      },
+      "DISPUTED": {
+        "EXACT": 0,
+        "TRANSFORMED": 0,
+        "CONTEXT_FLAG": 0,
+        "DISPUTED": 1,
+        "UNVERIFIABLE": 0
+      },
+      "UNVERIFIABLE": {
+        "EXACT": 0,
+        "TRANSFORMED": 0,
+        "CONTEXT_FLAG": 0,
+        "DISPUTED": 0,
+        "UNVERIFIABLE": 3
+      }
+    },
+    "per_case": [
+      {
+        "cat": "exact_full",
+        "gold": "EXACT",
+        "codec": "EXACT",
+        "comp": "EXACT"
+      },
+      {
+        "cat": "context_drop_cond",
+        "gold": "CONTEXT_FLAG",
+        "codec": "CONTEXT_FLAG",
+        "comp": "CONTEXT_FLAG"
+      },
+      {
+        "cat": "context_drop_neg",
+        "gold": "CONTEXT_FLAG",
+        "codec": "CONTEXT_FLAG",
+        "comp": "CONTEXT_FLAG"
+      },
+      {
+        "cat": "context_drop_qa",
+        "gold": "CONTEXT_FLAG",
+        "codec": "CONTEXT_FLAG",
+        "comp": "CONTEXT_FLAG"
+      },
+      {
+        "cat": "context_drop_temporal",
+        "gold": "CONTEXT_FLAG",
+        "codec": "CONTEXT_FLAG",
+        "comp": "CONTEXT_FLAG"
+      },
+      {
+        "cat": "multispan_ok",
+        "gold": "EXACT",
+        "codec": "EXACT",
+        "comp": "EXACT"
+      },
+      {
+        "cat": "transform_norm",
+        "gold": "TRANSFORMED",
+        "codec": "TRANSFORMED",
+        "comp": "TRANSFORMED"
+      },
+      {
+        "cat": "legit_plain",
+        "gold": "EXACT",
+        "codec": "EXACT",
+        "comp": "EXACT"
+      },
+      {
+        "cat": "legit_short",
+        "gold": "EXACT",
+        "codec": "EXACT",
+        "comp": "EXACT"
+      },
+      {
+        "cat": "disputed",
+        "gold": "DISPUTED",
+        "codec": "DISPUTED",
+        "comp": "EXACT"
+      },
+      {
+        "cat": "tamper_text",
+        "gold": "UNVERIFIABLE",
+        "codec": "UNVERIFIABLE",
+        "comp": "UNVERIFIABLE"
+      },
+      {
+        "cat": "wrong_signer",
+        "gold": "UNVERIFIABLE",
+        "codec": "UNVERIFIABLE",
+        "comp": "UNVERIFIABLE"
+      },
+      {
+        "cat": "span_oob",
+        "gold": "UNVERIFIABLE",
+        "codec": "UNVERIFIABLE",
+        "comp": "EXACT"
+      },
+      {
+        "cat": "overlap_spans",
+        "gold": "EXACT",
+        "codec": "EXACT",
+        "comp": "EXACT"
+      },
+      {
+        "cat": "homograph_clause",
+        "gold": "CONTEXT_FLAG",
+        "codec": "CONTEXT_FLAG",
+        "comp": "EXACT"
+      },
+      {
+        "cat": "contradictory_constraints",
+        "gold": "CONTEXT_FLAG",
+        "codec": "CONTEXT_FLAG",
+        "comp": "CONTEXT_FLAG"
+      },
+      {
+        "cat": "empty_span",
+        "gold": "EXACT",
+        "codec": "EXACT",
+        "comp": "EXACT"
+      },
+      {
+        "cat": "transform_ws",
+        "gold": "TRANSFORMED",
+        "codec": "TRANSFORMED",
+        "comp": "TRANSFORMED"
+      }
+    ]
+  },
+  "T2": {
+    "codec_accuracy": 1.0
+  },
+  "T3": {
+    "all_detected": true
+  },
+  "policy": {
+    "all_correct": true,
+    "cases": [
+      {
+        "cat": "offrecord_direct_quote",
+        "gold": "PROHIBITED_BY_AGREEMENT",
+        "verdict": "PROHIBITED_BY_AGREEMENT"
+      },
+      {
+        "cat": "unauth_retraction",
+        "gold": "EXPLICIT_ACTIVE",
+        "verdict": "EXPLICIT_ACTIVE"
+      }
+    ]
+  },
+  "note": "comp baseline equals codec on plain syntactic coverage but loses positional (homograph) detection, bitemporal hindsight queries, permissions, and fork detection."
+}

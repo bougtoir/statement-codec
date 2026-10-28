@@ -1,0 +1,116 @@
+{
+ "_label": "SYNTHETIC parity comparison (comp2 vs codec)",
+ "T1": [
+  {
+   "cat": "exact_full",
+   "codec": "EXACT",
+   "comp2": "EXACT",
+   "same": true
+  },
+  {
+   "cat": "context_drop_cond",
+   "codec": "CONTEXT_FLAG",
+   "comp2": "CONTEXT_FLAG",
+   "same": true
+  },
+  {
+   "cat": "context_drop_neg",
+   "codec": "CONTEXT_FLAG",
+   "comp2": "CONTEXT_FLAG",
+   "same": true
+  },
+  {
+   "cat": "context_drop_qa",
+   "codec": "CONTEXT_FLAG",
+   "comp2": "CONTEXT_FLAG",
+   "same": true
+  },
+  {
+   "cat": "context_drop_temporal",
+   "codec": "CONTEXT_FLAG",
+   "comp2": "CONTEXT_FLAG",
+   "same": true
+  },
+  {
+   "cat": "multispan_ok",
+   "codec": "EXACT",
+   "comp2": "EXACT",
+   "same": true
+  },
+  {
+   "cat": "transform_norm",
+   "codec": "TRANSFORMED",
+   "comp2": "TRANSFORMED",
+   "same": true
+  },
+  {
+   "cat": "legit_plain",
+   "codec": "EXACT",
+   "comp2": "EXACT",
+   "same": true
+  },
+  {
+   "cat": "legit_short",
+   "codec": "EXACT",
+   "comp2": "EXACT",
+   "same": true
+  },
+  {
+   "cat": "disputed",
+   "codec": "DISPUTED",
+   "comp2": "DISPUTED",
+   "same": true
+  },
+  {
+   "cat": "tamper_text",
+   "codec": "UNVERIFIABLE",
+   "comp2": "UNVERIFIABLE",
+   "same": true
+  },
+  {
+   "cat": "wrong_signer",
+   "codec": "UNVERIFIABLE",
+   "comp2": "UNVERIFIABLE",
+   "same": true
+  },
+  {
+   "cat": "span_oob",
+   "codec": "UNVERIFIABLE",
+   "comp2": "UNVERIFIABLE",
+   "same": true
+  },
+  {
+   "cat": "overlap_spans",
+   "codec": "EXACT",
+   "comp2": "EXACT",
+   "same": true
+  },
+  {
+   "cat": "homograph_clause",
+   "codec": "CONTEXT_FLAG",
+   "comp2": "CONTEXT_FLAG",
+   "same": true
+  },
+  {
+   "cat": "contradictory_constraints",
+   "codec": "CONTEXT_FLAG",
+   "comp2": "CONTEXT_FLAG",
+   "same": true
+  },
+  {
+   "cat": "empty_span",
+   "codec": "EXACT",
+   "comp2": "EXACT",
+   "same": true
+  },
+  {
+   "cat": "transform_ws",
+   "codec": "TRANSFORMED",
+   "comp2": "TRANSFORMED",
+   "same": true
+  }
+ ],
+ "equivalent_labels": true,
+ "codec_label_loc": 115,
+ "comp2_label_loc": 42
+}
